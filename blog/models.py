@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
+from ckeditor_uploader.fields import RichTextUploadingField
 
 
 class Post(models.Model):
@@ -18,3 +19,5 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+    text = RichTextUploadingField()
